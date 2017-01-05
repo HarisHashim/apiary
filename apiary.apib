@@ -78,3 +78,43 @@ form of choices.
                     }
                 ]
             }
+
++ Request (application/json)
+
+        {
+            "question": "Favourite cat?",
+            "choices": [
+                "Kitty",
+                "Pussy",
+                "Tomcat",
+                "Tiger"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/3
+
+    + Body
+
+            {
+                "question": "Favourite cat?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Kitty",
+                        "votes": 0
+                    }, {
+                        "choice": "Pussy",
+                        "votes": 0
+                    }, {
+                        "choice": "Tomcat",
+                        "votes": 0
+                    }, {
+                        "choice": "Tiger",
+                        "votes": 0
+                    }
+                ]
+            }
